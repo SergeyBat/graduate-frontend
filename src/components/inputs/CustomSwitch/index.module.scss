@@ -1,0 +1,27 @@
+@import '../../../styles/variables';
+@import '../../../styles/media';
+
+.switch {
+  width: fit-content;
+  height: fit-content;
+  border: 2px solid white;
+  border-radius: 20px;
+  display: flex;
+  background-color: #0D1227;
+  outline: none;
+
+  &__switch-left,
+  &__switch-right{
+    width: 100%;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+    background-color: #0D1227;
+    border-style: none;
+    &_activeTab {
+      background-color: #254BA6;
+    }
+  }
+
+
+}

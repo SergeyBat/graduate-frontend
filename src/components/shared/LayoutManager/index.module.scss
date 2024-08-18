@@ -1,0 +1,29 @@
+@import 'src/styles/variables.scss';
+@import 'src/styles/media.scss';
+
+.layout-manager {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  color: black;
+
+  &__navigation,
+  &__footer {
+    width: 100%;
+    background-color: $transparency-color;
+  }
+
+  &__content {
+    width: 1700px;
+
+    @include mediaMinMax(1025, $normal) {
+      width: vw-full(1700);
+    }
+
+    @include media($small) {
+      width: 100%;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+  }
+}

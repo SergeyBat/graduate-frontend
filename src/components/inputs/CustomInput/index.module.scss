@@ -1,0 +1,76 @@
+@import "src/styles/variables.scss";
+@import "src/styles/media.scss";
+
+.custom-input {
+  position: relative;
+
+  &__input {
+    border: 1px solid $gray-light-color;
+    border-radius: 14px;
+    width: 100%;
+    height: 40px;
+    color: $pickled-bluewood-color;
+    background-color: $catskill-white-color;
+    padding: 14px 20px;
+    font-size: 1.0625rem;
+    font-weight: $medium;
+    line-height: 32px;
+
+    outline: none;
+
+    @include mediaMinMax($small, $normal) {
+      height: vw-full(40);
+      padding: 0.72vw 1.04vw;
+      font-size: 0.88vw;
+      line-height: 1.66vw;
+      border-radius: 0.72vw;
+    }
+
+    &_card-icon {
+      background-size: 24px 18px;
+      background-repeat: no-repeat;
+      background-position: 20px;
+      padding-left: 54px;
+    }
+
+    &::placeholder {
+      font-size: 17px;
+      color: $darker-cadet-blue-color;
+      font-weight: $medium;
+      line-height: 32px;
+
+      @include mediaMinMax($small, $normal) {
+        font-size: vw-full(17);
+        line-height: 1.66vw;
+      }
+    }
+
+  }
+
+  &__input_red-border {
+    border-color: $burnt-sienna-color;
+  }
+
+  &__error {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 20px;
+    color: $burnt-sienna-color;
+    line-height: 16px;
+    font-weight: $bold;
+    font-size: 16px;
+
+    @include mediaMinMax($small, $normal) {
+      top: calc(100% + 5px);
+      left: 1.04vw;
+      font-size: vw-full(16);
+      line-height: 0.83vw;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+  }
+}

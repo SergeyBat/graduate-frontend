@@ -1,0 +1,159 @@
+@import 'src/styles/variables.scss';
+@import 'src/styles/media.scss';
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(39, 55, 51, 0.8);
+  backdrop-filter: blur(25px);
+  border-radius: 25px;
+  width: 500px;
+  min-height: 450px;
+  @include mediaMinMax(1025, $normal) {
+    width: vw-full(500);
+    min-height: vw-full(450);
+  }
+
+  &_is-modal {
+    height: content-box;
+    width: 100%;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 11, 28, 0.48);
+    z-index: 110;
+    backdrop-filter: blur(1px);
+  }
+
+  &__login-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    gap: 50px;
+    flex-direction: column;
+    position: relative;
+    padding: 30px 40px;
+    @include mediaMinMax(1025, $normal) {
+      padding: vw-full(30) vw-full(40);
+      border-radius: vw-full(48);
+    }
+  }
+
+  &__control {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__form-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    gap: 35px;
+
+    @include mediaMinMax(1025, $normal) {
+      gap: vw-full(35);
+    }
+  }
+
+  &__input-wrapper {
+    width: 410px;
+    height: 50px;
+
+    @include mediaMinMax(1025, $normal) {
+      width: vw-full(410);
+      height: vw-full(50);
+    }
+  }
+
+  &__input {
+    height: 100%;
+    @-webkit-keyframes autofill {
+      to {
+        color: inherit;
+        background: transparent;
+      }
+    }
+
+    &:-webkit-autofill {
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both;
+    }
+  }
+
+  &__forgot {
+    font-size: 16px;
+    line-height: 27px;
+
+    background: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    color: #00ffff;
+    opacity: 0.8;
+
+    @include mediaMinMax($small, $normal) {
+      font-size: 0.83vw;
+      line-height: 1.04vw;
+    }
+  }
+
+  &__close-button {
+    background: none;
+    border: none;
+    outline: none;
+  }
+
+  &__names {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 410px;
+
+    @include mediaMinMax($small, $normal) {
+      width: vw-full(410);
+    }
+
+    @include media($xmini) {
+      width: 100%
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    width: 320px;
+    height: 60px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.0625rem;
+    line-height: 27px;
+    font-weight: $bold;
+
+    color: $white-color;
+    background-color: $pickled-bluewood-color;
+
+    @include mediaMinMax($small, $normal) {
+      width: 16.66vw;
+      height: 3.125vw;
+      border-radius: 0.52vw;
+      font-size: 0.88vw;
+      line-height: 1.4vw;
+    }
+
+    &:disabled {
+      background-color: $gull-gray-color;
+    }
+  }
+
+}

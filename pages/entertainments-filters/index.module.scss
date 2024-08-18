@@ -1,0 +1,84 @@
+@import 'src/styles/variables.scss';
+@import 'src/styles/media.scss';
+
+.entertainments-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  @include mediaMinMax(1025, $normal) {
+    gap: vw-full(50);
+  }
+
+  &__filter {
+    width: 100%;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #262D39;
+    border-radius: 25px;
+    padding: 50px 50px;
+    height: fit-content;
+    transition: 0.4s all ;
+
+    @include mediaMinMax(1025, $normal) {
+      padding: vw-full(50) vw-full(50);
+      gap: vw-full(40);
+    }
+  }
+
+  &__filter-select-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 0 auto;
+  }
+
+  &__select-title {
+    color: $catskill-white-color;
+  }
+
+  &__filter-select,
+  &__filter-input,
+  &__filter-date-picker,
+  &__filter-btn {
+    height: 40px !important;
+    width: 350px;
+    border-radius: 20px !important;
+    @include mediaMinMax(1025, $normal) {
+      height: vw-full(40) !important;
+      width: vw-full(350);
+      border-radius: vw-full(20) !important;
+    }
+    input,
+    div {
+      height: 40px !important;
+      width: 350px;
+      border-radius: 20px !important;
+      display: flex;
+      align-items: center;
+      @include mediaMinMax(1025, $normal) {
+        height: vw-full(40) !important;
+        width: vw-full(350);
+        border-radius: vw-full(20) !important;
+      }
+    }
+  }
+
+  &__filter-btn {
+    margin-top: auto;
+    justify-self: flex-end;
+  }
+
+  &__list-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    gap: 50px;
+
+    @include mediaMinMax(1025, $normal) {
+      gap: vw-full(50);
+    }
+  }
+}

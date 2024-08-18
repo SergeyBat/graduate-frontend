@@ -1,0 +1,50 @@
+@import 'src/styles/variables.scss';
+@import 'src/styles/media.scss';
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @include mediaMinMax(1025, $normal) {
+    gap: vw-full(10);
+  }
+
+  &__image {
+    width: 70px !important;
+    height: 70px !important;
+
+    @include mediaMinMax(1025, $normal) {
+      width: vw-full(70) !important;
+      height: vw-full(70) !important;
+    }
+
+    @include media($small) {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include media($xlmini) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 42px;
+    color: $athens-gray-color;
+    font-weight: $extraBold;
+
+    @include mediaMinMax(1025, $normal) {
+      font-size: vw-full(42);
+    }
+
+    @include media($small) {
+      font-size: 30px;
+    }
+
+    @include media($xlmini) {
+      font-size: 25px;
+    }
+  }
+}

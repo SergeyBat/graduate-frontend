@@ -1,0 +1,198 @@
+@import 'src/styles/variables.scss';
+@import 'src/styles/media.scss';
+
+
+.navigation {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(25px);
+  transition: 0.7s all;
+  font-weight: $extraBold;
+  font-size: 42px;
+  height: 80px;
+  top: 0;
+  z-index: 100;
+  position: sticky;
+  @include mediaMinMax(1025, $normal) {
+    height: vw-full(80);
+    font-size: vw-full(42);
+  }
+
+  @include media($small) {
+    height: 50px;
+  }
+
+  &__nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    gap: 40px;
+    padding: 0 165px;
+
+    @include mediaMinMax(1025, $normal) {
+      padding: 0 vw-full(165);
+      gap: vw-full(40);
+    }
+
+    @include media($small) {
+      width: 100%;
+      padding: 0 20px;
+      gap: 20px;
+    }
+
+    @include media($xlmini) {
+      padding: 0 10px;
+    }
+  }
+
+  &__logo-wrap {
+    width: fit-content;
+    text-decoration: none;
+
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+  }
+
+  &__links {
+    display: flex;
+    gap: 90px;
+
+    @include mediaMinMax(1025, $normal) {
+      gap: vw-full(90);
+    }
+  }
+
+  &__link {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: $medium;
+    font-size: 26px;
+    gap: 25px;
+    text-decoration-color: #B01FEA;
+
+    @include mediaMinMax(1025, $normal) {
+      font-size: vw-full(26);
+      gap: vw-full(25);
+    }
+
+    &_active-tab {
+      font-weight: $bold;
+      font-size: 19px;
+      //text-decoration: underline;
+      //text-decoration-color: #4A75F4FF ;
+      line-height: 1.5;
+      text-underline-offset: 3px;
+    }
+  }
+
+  &__dropdown-overlay {
+    margin-top: 18px !important;
+
+    @include mediaMinMax(1025, $normal) {
+      margin-top: vw-full(18) !important;
+    }
+
+    ul {
+      background-color: $transparency-color !important;
+      backdrop-filter: blur(25px);
+
+      li:hover{
+        background-color: rgba(0, 0, 0, 0.2) !important;
+      }
+    }
+  }
+
+  &__logout-btn {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: $athens-gray-color !important;
+    font-size: 20px;
+    background: none;
+    border: none;
+
+    @include mediaMinMax(1025, $normal) {
+      font-size: vw-full(20);
+    }
+
+  }
+
+  &__button-user {
+    display: flex;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border: 1px solid $athens-gray-color;
+    border-radius: 60px;
+    padding: 10px;
+    margin: 0;
+    background: none;
+    outline: none;
+
+    &:hover {
+      border-color: $athens-gray-color !important;
+    }
+
+    @include mediaMinMax(1025, $normal) {
+      width: vw-full(55);
+      height: vw-full(55);
+      padding: vw-full(10);
+      border-radius: vw-full(55);
+    }
+  }
+
+  &__user-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__user-info {
+    color: #fff;
+    font-weight: $medium;
+    font-size: 26px;
+    @include mediaMinMax(1025, $normal) {
+      font-size: vw-full(26);
+    }
+  }
+
+  &__user-icon {
+    max-width: 100%;
+  }
+
+  &__profile-link {
+    color: $athens-gray-color !important;
+    font-size: 20px;
+
+    @include mediaMinMax(1025, $normal) {
+      font-size: vw-full(20);
+    }
+  }
+
+  &__login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #254BA6;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 12px;
+    line-height: 1;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.4s all;
+  }
+}

@@ -1,0 +1,21 @@
+@import 'src/styles/variables.scss';
+@import 'src/styles/media.scss';
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include mediaMinMax(1025, $normal) {
+    gap: vw-full(50);
+  }
+
+  &__select {
+    max-width: 100% !important;
+  }
+}

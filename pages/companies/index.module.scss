@@ -1,0 +1,15 @@
+@import 'src/styles/variables.scss';
+@import 'src/styles/media.scss';
+
+.entertainments {
+  &__list-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    gap: 50px;
+
+    @include mediaMinMax(1025, $normal) {
+      gap: vw-full(50);
+    }
+  }
+}

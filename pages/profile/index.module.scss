@@ -1,0 +1,88 @@
+@import 'src/styles/variables.scss';
+@import 'src/styles/media.scss';
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  @include mediaMinMax(1025, $normal) {
+    gap: vw-full(50);
+  }
+
+  &__fieldset {
+    border: none;
+    display: grid;
+    grid-template-columns: 400px 1fr 1fr;
+  }
+
+  &__uploader-wrapper {
+    width: 300px !important;
+    height: 300px !important;
+
+    @include mediaMinMax(1025, $normal) {
+      width: vw-full(300)!important;
+      height: vw-full(300) !important;
+    }
+  }
+
+  &__uploader-text-wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image-wrapper {
+    div {
+      width: 300px !important;
+      height: 300px !important;
+      border: 3px solid #262D39;
+      border-radius: 50%;
+
+      @include mediaMinMax(1025, $normal) {
+        width: vw-full(300)!important;
+        height: vw-full(300) !important;
+      }
+    }
+  }
+
+  &__wrapper-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-width: 300px;
+  }
+
+
+  &__list-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    gap: 50px;
+
+    @include mediaMinMax(1025, $normal) {
+      gap: vw-full(50);
+    }
+  }
+
+
+}
+
+.ant-upload.ant-upload-select {
+  width: 300px !important;
+  height: 300px !important;
+
+  @include mediaMinMax(1025, $normal) {
+    width: vw-full(300)!important;
+    height: vw-full(300) !important;
+  }
+}

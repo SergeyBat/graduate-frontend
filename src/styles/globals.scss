@@ -1,0 +1,143 @@
+@import "./variables.scss";
+@import 'src/styles/media.scss';
+
+html,
+body,
+#__next {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: $font-family;
+  color: black;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #A7DDD1 0%, rgba(60, 186, 158, 0.641546) 0.01%, rgba(97, 200, 175, 0.641563) 0.02%, #89BCE1 55.44%, #B7A2E6 104.35%);
+  letter-spacing: 1.3px;
+}
+
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: border-box;
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  width: fit-content;
+}
+
+.ant-table {
+  background: #262D39 !important;
+  border-radius: 25px !important;
+
+  &-title {
+    color: $athens-gray-color;
+  }
+
+  @include mediaMinMax(1025, $normal) {
+    border-radius: vw-full(25) !important;
+  }
+
+  &-content {
+    border-radius: 25px !important;
+  }
+
+  &-thead &-cell {
+    background: #262D39 !important;
+    border: none !important;
+    color: $athens-gray-color !important;
+    font-weight: $extraBold;
+    font-size: 28px;
+    &:before {
+      background: none !important;
+    }
+
+    @include mediaMinMax(1025, $normal) {
+      font-size: vw-full(28);
+    }
+  }
+
+  &-tbody &-cell {
+    background: #262D39 !important;
+    border: none !important;
+    color: $athens-gray-color !important;
+    letter-spacing: 1.3px !important;
+
+
+    &-row-hover {
+      background: #131313 !important;
+      & .ant-btn {
+        background: #262D39 !important;
+
+      }
+    }
+  }
+
+  & .ant-btn {
+    background: #131313;
+    color: $athens-gray-color;
+    border: none;
+    border-radius: 25px;
+  }
+}
+
+.ant-btn {
+  background: $transparency-color;
+  color: $athens-gray-color;
+  border: none;
+  border-radius: 25px;
+
+  &:hover {
+    color: #ff4b47 !important;
+  }
+}
+
+.ant-empty-description {
+  color: white !important;
+}
+
+.ant-menu {
+  background: $transparency-color !important;
+
+  &-item {
+    color: $athens-gray-color;
+
+    &-active,
+    &-selected {
+      border-radius: inherit !important;
+      border-bottom: none !important;
+      color: #ff4b47 !important;
+      outline: none;
+
+      &:hover {
+        color: #ff4b47 !important;
+        &:after {
+          border: none!important;
+        }
+      }
+
+      &:after {
+        border: none!important;
+      }
+    }
+
+    &-active {
+      background: #262D39 !important;
+    }
+
+    &-selected {
+      background: $transparency-color !important;
+    }
+  }
+}
+

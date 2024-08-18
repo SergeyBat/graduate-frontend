@@ -1,0 +1,16 @@
+@import 'src/styles/variables.scss';
+@import 'src/styles/media.scss';
+
+
+.footer {
+  height: 160px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(25px);
+  color: $white-color;
+  padding: 45px 160px;
+
+  @include mediaMinMax(1025, $normal) {
+    height: vw-full(160);
+    padding: vw-full(45) vw-full(160);
+  }
+}

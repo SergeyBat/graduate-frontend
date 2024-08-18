@@ -1,0 +1,81 @@
+@import 'src/styles/variables.scss';
+@import 'src/styles/media.scss';
+
+.my-company {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 20px;
+
+  @include mediaMinMax(1025, $normal) {
+    padding-right: vw-full(20);
+    gap: vw-full(30);
+  }
+  &__menu {
+    max-width: 350px;
+    padding: 30px 20px;
+    background-color: $transparency-color;
+
+    @include mediaMinMax(1025, $normal) {
+      max-width: vw-full(350);
+      padding: vw-full(30) vw-full(20);
+    }
+  }
+
+  &__content{
+    width: 100%;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include mediaMinMax(1025, $normal) {
+      margin: vw-full(30);
+      gap: vw-full(30);
+    }
+  }
+
+  &__main-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__main-info-title {
+    font-size: 42px;
+    padding: 10px 0;
+    @include mediaMinMax(1025, $normal) {
+      font-size: vw-full(42);
+    }
+  }
+
+  &__info-text {
+    font-size: 36px;
+    @include mediaMinMax(1025, $normal) {
+      font-size: vw-full(36);
+    }
+  }
+
+  &__main-info-image-wrapper {
+    width: 300px;
+    height: 250px;
+    border: 1px solid $athens-gray-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @include mediaMinMax(1025, $normal) {
+      width: vw-full(300);
+      height: vw-full(250);
+    }
+  }
+
+  &__image-text {
+    font-size: 46px;
+    user-select: none;
+    @include mediaMinMax(1025, $normal) {
+      font-size: vw-full(46);
+    }
+  }
+}

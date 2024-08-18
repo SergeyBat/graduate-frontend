@@ -1,0 +1,88 @@
+@import 'src/styles/variables.scss';
+@import 'src/styles/media.scss';
+
+.event-big-card {
+	width: 1450px;
+	height: 620px;
+	position: relative;
+	margin: 0 auto;
+	display: flex;
+
+	@include mediaMinMax(1025, $normal) {
+		width: vw-full(1450);
+		height: vw-full(620);
+	}
+
+	&__top-block {
+		top: 20px;
+		left: 70px;
+		position: absolute;
+		display: flex;
+
+		@include mediaMinMax(1025, $normal) {
+			top: vw-full(20);
+			left: vw-full(70);
+		}
+
+		&_isInfo {
+			top: initial;
+			bottom: 20px;
+
+			@include mediaMinMax(1025, $normal) {
+				bottom: vw-full(20);
+			}
+		}
+	}
+
+	&__image {
+		width: 1450px;
+		height: 620px;
+		object-fit: cover;
+		object-position: center;
+    border-radius: 25px;
+
+		@include mediaMinMax(1025, $normal) {
+			width: vw-full(1450);
+			height: vw-full(620);
+      border-radius: vw-full(25);
+		}
+	}
+
+	&__bottom-block {
+		bottom: 60px;
+		left: 70px;
+		position: absolute;
+
+		@include mediaMinMax(1025, $normal) {
+			bottom: vw-full(60);
+			left: vw-full(70);
+		}
+	}
+
+	&__top-block-tag {
+		padding: 5px 20px;
+		background-color: $white-color;
+		border-radius: 30px;
+		display: flex;
+		width: fit-content;
+		margin-right: 20px;
+
+		@include mediaMinMax(1025, $normal) {
+			padding: vw-full(5) vw-full(20);
+			border-radius: vw-full(30);
+			margin-right: vw-full(20);
+		}
+	}
+
+	&__bottom-block-title {
+		color: $white-color;
+		font-weight: 800;
+		font-size: 60px;
+		line-height: 45px;
+
+		@include mediaMinMax(1025, $normal) {
+			font-size: vw-full(60);
+			line-height: vw-full(45);
+		}
+	}
+}

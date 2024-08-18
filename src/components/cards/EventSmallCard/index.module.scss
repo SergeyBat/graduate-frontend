@@ -1,0 +1,132 @@
+@import 'src/styles/variables.scss';
+@import 'src/styles/media.scss';
+
+.event-small-card {
+	width: 449px;
+	height: 339px;
+	position: relative;
+	border-radius: 25px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+
+	&:visited {
+		text-decoration: none;
+	}
+
+	@include mediaMinMax(1025, $normal) {
+		width: vw-full(449);
+		height: vw-full(339);
+		border-radius: vw-full(25);
+	}
+
+	&_withoutTitle {
+		height: 250px;
+
+		@include mediaMinMax(1025, $normal) {
+			height: vw-full(250);
+		}
+	}
+
+	&__top-block {
+		top: 20px;
+		left: 20px;
+		position: absolute;
+		display: flex;
+
+		@include mediaMinMax(1025, $normal) {
+			top: vw-full(20);
+			left: vw-full(20);
+		}
+	}
+
+	&__image {
+		width: 449px;
+		height: 251px;
+		object-fit: cover;
+		object-position: center;
+
+		@include mediaMinMax(1025, $normal) {
+			width: vw-full(449);
+			height: vw-full(251);
+		}
+
+		&_withoutTitle {
+			height: 250px;
+
+			@include mediaMinMax(1025, $normal) {
+				height: vw-full(250);
+			}
+		}
+	}
+
+	&__bottom-block {
+		width: 100%;
+		height: 90px;
+		background-color: #262D39;
+		padding: 20px;
+
+		@include mediaMinMax(1025, $normal) {
+			height: vw-full(90);
+			padding: vw-full(20);
+		}
+	}
+
+	&__top-block-tag {
+		padding: 5px 20px;
+		background-color: $white-color;
+		border-radius: 30px;
+		display: flex;
+		width: fit-content;
+		margin-right: 20px;
+
+		@include mediaMinMax(1025, $normal) {
+			padding: vw-full(5) vw-full(20);
+			border-radius: vw-full(30);
+			margin-right: vw-full(20);
+		}
+	}
+
+	&__bottom-block-title {
+		color: $white-color;
+		font-weight: 700;
+		font-size: 26px;
+		line-height: 20px;
+		margin-bottom: 20px;
+
+		@include mediaMinMax(1025, $normal) {
+			font-size: vw-full(26);
+			line-height: vw-full(20);
+			margin-bottom: vw-full(20);
+		}
+	}
+
+	&__bottom-block-time {
+		font-size: 16px;
+		line-height: 12px;
+		color: $white-color;
+
+		@include mediaMinMax(1025, $normal) {
+			font-size: vw-full(16);
+			line-height: vw-full(12);
+		}
+	}
+
+	&__description {
+		position: absolute;
+		font-weight: 700;
+		font-size: 26px;
+		line-height: 40px;
+		bottom: 20px;
+		left: 20px;
+		color: $white-color;
+
+		@include mediaMinMax(1025, $normal) {
+			font-size: vw-full(26);
+			line-height: vw-full(40);
+			bottom: vw-full(20);
+			left: vw-full(20);
+		}
+	}
+}

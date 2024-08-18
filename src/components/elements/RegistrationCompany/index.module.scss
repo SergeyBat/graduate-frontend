@@ -1,0 +1,137 @@
+@import 'src/styles/variables.scss';
+@import 'src/styles/media.scss';
+
+.modal-registration-company {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @include mediaMinMax(1025, $normal) {
+    margin-top: vw-full(10);
+    gap: vw-full(30);
+  }
+
+  &__form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #262d39;
+    border-radius: 25px;
+    padding: 20px;
+  }
+
+  &__main-info {
+    display: flex;
+    gap: 30px 70px;
+    flex-wrap: wrap;
+  }
+
+  &__additional-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+  }
+
+  &__other-params-wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__row-wrapper {
+    display: flex;
+  }
+
+  &__input-wrapper-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__input-wrapper {
+    width: 350px;
+  }
+
+  &__textarea-wrapper {
+    width: 350px;
+    height: 125px;
+  }
+
+  &__input-title {
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 1;
+    color: $athens-gray-color;
+    font-weight: $medium;
+  }
+
+  &__status-company {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 40px;
+    padding: 4px 9px;
+    border-radius: 15px;
+    user-select: none;
+    color: white;
+    background-color: #f29339;
+
+    &_isApproved {
+      background-color: #077e87;
+    }
+  }
+
+  &__uploader-text {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    color: $athens-gray-color;
+  }
+
+  &__uploader-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    max-width: 100%;
+    border: 2px solid $athens-gray-color;
+    border-radius: 25px;
+    width: 260px;
+    height: 150px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      .my-company__uploader-text {
+        display: flex;
+      }
+    }
+  }
+
+  &__uploading-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__actions-form-wrap {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+
+  &__input {
+    font-weight: $light;
+    letter-spacing: 1.2px;
+  }
+}
